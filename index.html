@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Template html css java script</title>
+        <title>Vue Email List</title>
 
         <!--Bootstrap Css-->
 
@@ -25,20 +25,22 @@
 
     <body>
         
-        <header>
+        <div id="app">
 
+            <h1>
+                Lista Random Email
+            </h1>
 
-        </header>
+            <ul v-if="emailList.length == 10" class="list-group" >
 
-        <main>
-
-
-        </main>
-
-        <footer>
-
-            
-        </footer>
+                <li v-for="email in emailList" class="list-group-item" >
+                    
+                    {{email.response}}
+                    
+                    
+                </li>
+            </ul>
+        </div>
 
         <!--Java-->
 
